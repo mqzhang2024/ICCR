@@ -12,7 +12,7 @@ Craniofacial reconstruction predicts craniofacial features from skull morphology
 
 <!-- ![img](assets/iccr_network.png) -->
 <p align="center">
-  <img src="assets/iccr_network.png" alt="Method" style="width:70%;"/>
+  <img src="assets/iccr_network.png" alt="Method" style="width:80%;"/>
 </p>
 
 
@@ -52,7 +52,7 @@ Train the PipNet network to capture contour feature points of key craniofacial s
 
 
 <p align="center">
-  <img src="assets/pipnet.png" alt="Method" style="width:40%;"/>
+  <img src="assets/pipnet.png" alt="Method" style="width:70%;"/>
 </p>
 
 
