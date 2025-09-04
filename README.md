@@ -21,7 +21,7 @@ Craniofacial reconstruction predicts craniofacial features from skull morphology
 ## 🚀 Highlights
 
 *   **Image Quality:** A *diffusion-based* craniofacial reconstruction method for generating high-fidelity results.
-*   **Identity Preservation:** Integration of *multimodal information* to ensure strong identity preservation..
+*   **Identity Preservation:** Integration of *multimodal information* to ensure strong identity preservation.
 *   **Conditional Control:** Modification of biometric *text* for highly flexible and fine-grained controllable results.
 
 
