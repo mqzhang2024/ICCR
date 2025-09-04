@@ -91,8 +91,6 @@ class ICCR(pl.LightningModule):
         x, c = self.generator.get_input(batch,'jpg')   
         loss_Noise,fake_images = self.generator(x,c)
 
-
-        # ================= Optimise the Discriminator ==================
         # Fake Detection and Loss  
         pred_fake_pool = self.discriminate(cond_images, fake_images) 
         loss_fake = self.criterionGAN(pred_fake_pool, False)     
@@ -104,8 +102,6 @@ class ICCR(pl.LightningModule):
         D_loss = (loss_real + loss_fake) * 0.5
         self.log('D_loss', D_loss, prog_bar=True)
 
-
-        # ================= Optimise the ContorlNet =================
         loss_Noise=loss_Noise*10
                     
         # Loss of GAN    
@@ -144,8 +140,6 @@ class ICCR(pl.LightningModule):
             self.manual_backward(D_loss)
             d_opt.step()
         
-
-        # ======save train loss=====
         self.save_json('train',float(loss_GAN),float(loss_Noise),float(G_loss),float(loss_fake),float(loss_real),float(D_loss),float(loss_FM),float(loss_PiP))
 
  
@@ -161,8 +155,6 @@ class ICCR(pl.LightningModule):
         x, c = self.generator.get_input(batch,'jpg')   
         loss_Noise,fake_images = self.generator(x,c)
 
-
-        # ================= Optimise the Discriminator ==================
         # Fake Detection and Loss
         pred_fake_pool = self.discriminate(cond_images, fake_images, use_pool=True) 
         loss_fake = self.criterionGAN(pred_fake_pool, False)     
@@ -174,8 +166,6 @@ class ICCR(pl.LightningModule):
         D_loss = (loss_real + loss_fake) * 0.5
         self.log('D_loss', D_loss, prog_bar=True)
 
-
-        # ================= Optimise the ContorlNet =================
         loss_Noise=loss_Noise*10
                     
         # Loss of GAN        
@@ -205,8 +195,6 @@ class ICCR(pl.LightningModule):
         G_loss=loss_GAN + loss_Noise + loss_FM + loss_PiP
         self.log('G_loss', G_loss, prog_bar=True)
 
-
-        # ======save valid loss=====
         self.save_json('valid',float(loss_GAN),float(loss_Noise),float(G_loss),float(loss_fake),float(loss_real),float(D_loss),float(loss_FM),float(loss_PiP))
         
          
@@ -248,9 +236,6 @@ class ICCR(pl.LightningModule):
             f1.write(json_str)
             f1.write('\n') 
 
-   
-
-    # ==============Network of Discriminator==================
     def weights_init(self,m):
         classname = m.__class__.__name__
         if classname.find('Conv') != -1:
@@ -284,8 +269,6 @@ class ICCR(pl.LightningModule):
         else:
             return self.discriminator.forward(input_concat)
         
-
-
 
 class ImagePool():
     def __init__(self, pool_size):
