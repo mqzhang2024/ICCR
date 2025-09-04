@@ -8,9 +8,9 @@ Official implementation of [ICCR-Diff: Identity-Preserving and Controllable Cran
 
 ## 📖 Abstract
 
-<div style="text-align: justify;">
+<p align="justify">
 Craniofacial reconstruction predicts craniofacial features from skull morphology to reconstruct the craniofacial surface. Although previous methods have achieved promising performance, they face three critical limitations: insufficient image quality, poor identity preservation, and difficulties with conditional control. To overcome these challenges, we propose a novel diffusion-based craniofacial reconstruction method that preserves identity across domain transfer. Our approach incorporates multiple modules to separately manage multimodal information including skull data, landmarks, texture features, and biometric information, yielding high-fidelity results under various constraints. Furthermore, by enabling flexible modification of biometric information through standardized text prompts, our method achieves fine-grained control while maintaining individual identity characteristics. Extensive experimental results demonstrate that our method outperforms existing approaches in image quality and identity retrieval, showcasing exceptional robustness, strong identity preservation, and enhanced editability.
-</div>
+</p>
 
 
 
