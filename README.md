@@ -13,10 +13,8 @@ Craniofacial reconstruction predicts craniofacial features from skull morphology
 </p>
 
 
-
-<!-- ![img](assets/iccr_network.png) -->
 <p align="center">
-  <img src="assets/iccr_network.png" alt="Method" style="width:70%;"/>
+  <img src="assets/iccr_network.png" alt="Method" style="width:80%;"/>
 </p>
 
 
