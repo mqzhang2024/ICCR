@@ -66,6 +66,7 @@ def iccr_sample(prompt,skull_image):
     # iccr sample config
     iccr_model.use_Grad=True
     cld_model=iccr_model.generator
+    cld_model.control_scales = [1.4,1.4,1.4,1.2,1.2,1.2,0.8,0.8,0.8,0.8,0.8,0.8,0.8]
     ddim_sampler = DDIMSampler(iccr_model)
 
     # sampling
